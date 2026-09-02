@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+  <style>
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    fieldset {
+      margin-bottom: 10px;
+      width:fit-content;
+    }
+    #comments {
+      width: 300px;
+      height: 100px;
+      padding: 5px;
+      border: 1px solid rgb(255, 166, 166);
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <section>
+      <h2>Fill up the form</h2>
+      <form action="submit.php" method="post">
+        <label for="name">Name: <input type="text" id="name" name="name" placeholder="Enter your name"
+            required /></label>
+        <label for="phone">Phone: <input type="tel" id="phone" name="phone"
+            placeholder="Enter your phone number" /></label>
+        <label for="email">Email: <input type="email" id="email" name="email" placeholder="Enter your email"
+            required /></label>
+        <label for="message">Message: <textarea id="message" name="message" placeholder="Enter your message"
+            required></textarea></label>
+        <fieldset>
+          <legend>Gender</legend>
+          <label for="male"><input type="radio" id="male" name="gender" value="male" />Male 
+          </label>
+          <label for="female"><input type="radio" id="female" name="gender" value="female" />Female
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Hobbies</legend>
+          <label for="reading"><input type="checkbox" id="reading" name="hobbies" value="reading" />Reading
+          </label>
+          <label for="traveling"><input type="checkbox" id="traveling" name="hobbies" value="traveling" />Traveling
+          </label>
+          <label for="sports"><input type="checkbox" id="sports" name="hobbies" value="sports" />Sports
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Comments</legend>
+          <textarea name="comments" id="comments" placeholder="Enter your comments"></textarea>
+        </fieldset>
+        <input type="reset">
+        <button type="submit">Submit</button>
+      </form>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
